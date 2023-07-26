@@ -17,7 +17,7 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 function deleteTable(bookArray) {
-  console.log(bookArray)
+ 
   for (let i = 1; i < bookArray.length + 1; i++) {
     document.getElementById("bookTable").deleteRow(1);
 
@@ -74,8 +74,14 @@ number.forEach((button) => {
 
 /*delete book*/
 
+
+
 function deleteBook(value) {
-myLibrary.splice(value, 1)
+
+  console.log(value)
+  myLibrary.splice(value, 1)
+   console.log(myLibrary)
+ 
 deleteTable2(myLibrary)
 displayBooks(myLibrary)
 }
