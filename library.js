@@ -16,18 +16,26 @@ function addBookToLibrary(title, author, pages) {
 }
 
 function displayBooks(bookArray) {
- 
+  let table = document.getElementById("bookTable");
+  let row = table.insertRow(1);
+  let cell1 = row.insertCell(0);
+  let cell2 = row.insertCell(1);
+  let cell3 = row.insertCell(2);
+  cell1.textContent = bookArray[0].title;
+  cell2.textContent = bookArray[0].author;
+  cell3.textContent = bookArray[0].pages;
+ console.log(bookArray[0].title)
 }
 
 
 addBookToLibrary('book3' , 'Tolkien', '500')
-console.log(myLibrary)
+console.log(myLibrary[0].author)
+displayBooks(myLibrary)
+
+
 
 const theHobbit = new Book('The Hobbit' , 'Tolkien', '500')
 console.log(theHobbit)
 console.log(theHobbit.info())
-console.log(Object.getPrototypeOf(Book))
-console.log(Object.getPrototypeOf(theHobbit) == Book.prototype)
-console.log(Book.prototype)
-console.log(theHobbit.valueOf())
+
 
