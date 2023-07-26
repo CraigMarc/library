@@ -34,16 +34,27 @@ function displayBooks(bookArray) {
   let cell2 = row.insertCell(1);
   let cell3 = row.insertCell(2);
   let cell4 = row.insertCell(3);
+  let cell5 = row.insertCell(4);
+
   cell1.textContent = bookArray[i].title;
   cell2.textContent = bookArray[i].author;
   cell3.textContent = bookArray[i].pages;
   cell4.textContent = bookArray[i].read;
-  var tBox = document.createElement('input');
+  let tBox = document.createElement('input');
   tBox.setAttribute('type', 'checkbox');
-  tBox.setAttribute('value', '');
+  tBox.setAttribute('value', 'i');
   cell4.appendChild(tBox);
+
+  let deleteButton = document.createElement('button');
+  deleteButton.setAttribute('type', 'button');
+  deleteButton.setAttribute('value', 'i');
+  deleteButton.textContent = 'Delete'
+  cell5.appendChild(deleteButton);
+
+
   }
 }
+
 
 /*
 addBookToLibrary('book3' , 'Tolkien', '50')
