@@ -36,8 +36,24 @@ displayBooks(myLibrary)
 
 
 
+ 
+/*get data from form*/
+  
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault()
+  const data = Object.fromEntries(new FormData(e.target).entries());
+  let authorForm = data.author
+  let pagesForm = data.pages
+  let titleForm = data.title
+  addBookToLibrary(titleForm, authorForm, pagesForm)
+  displayBooks(myLibrary)
+});
+
+
+
+/*
 const theHobbit = new Book('The Hobbit' , 'Tolkien', '500')
 console.log(theHobbit)
-console.log(theHobbit.info())
+console.log(theHobbit.info())*/
 
 
