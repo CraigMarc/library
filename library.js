@@ -87,7 +87,7 @@ displayBooks(myLibrary)
 }
 
 function deleteTable2(bookArray) {
-  console.log(bookArray)
+  
   for (let i = 1; i < bookArray.length + 2; i++) {
     document.getElementById("bookTable").deleteRow(1);
 
