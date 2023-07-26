@@ -18,8 +18,7 @@ function addBookToLibrary(title, author, pages) {
 function deleteTable(bookArray) {
   console.log(bookArray)
   for (let i = 1; i < bookArray.length + 1; i++) {
-    let table = document.getElementById("bookTable");
-    let row = table.deleteRow(i);
+    document.getElementById("bookTable").deleteRow(1);
     console.log(i)
    
     }
