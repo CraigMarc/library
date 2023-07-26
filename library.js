@@ -1,25 +1,26 @@
 let myLibrary = [];
 
 
-function Book(title, author, pages) {
+function Book(title, author, pages, read) {
    
     this.title = title
     this.author = author
     this.pages = pages
+    this.read = read
     this.info = function() {
         return title + ' ' + author + ' ' + pages
   }
 }
 
-function addBookToLibrary(title, author, pages) {
-  myLibrary.push(new Book(title, author, pages))
+function addBookToLibrary(title, author, pages, read) {
+  myLibrary.push(new Book(title, author, pages, read))
 }
 
 function deleteTable(bookArray) {
   console.log(bookArray)
   for (let i = 1; i < bookArray.length + 1; i++) {
     document.getElementById("bookTable").deleteRow(1);
-    console.log(i)
+    
    
     }
 }
@@ -32,10 +33,15 @@ function displayBooks(bookArray) {
   let cell1 = row.insertCell(0);
   let cell2 = row.insertCell(1);
   let cell3 = row.insertCell(2);
+  let cell4 = row.insertCell(3);
   cell1.textContent = bookArray[i].title;
   cell2.textContent = bookArray[i].author;
   cell3.textContent = bookArray[i].pages;
- 
+  cell4.textContent = bookArray[i].read;
+  var tBox = document.createElement('input');
+  tBox.setAttribute('type', 'checkbox');
+  tBox.setAttribute('value', '');
+  cell4.appendChild(tBox);
   }
 }
 
@@ -55,11 +61,12 @@ document.querySelector('form').addEventListener('submit', (e) => {
   let authorForm = data.author
   let pagesForm = data.pages
   let titleForm = data.title
-  
+  let readForm = data.read
+  console.log(data)
   if (myLibrary.length > 0)
 { deleteTable(myLibrary)
 }
-  addBookToLibrary(titleForm, authorForm, pagesForm)
+  addBookToLibrary(titleForm, authorForm, pagesForm, readForm)
   displayBooks(myLibrary)
   document.getElementById("form").reset();
 });
