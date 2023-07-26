@@ -1,4 +1,4 @@
-let myLibrary = [{title: 'The Hobbit', author: 'Tolen', pages: '500'}, {title: 'The Hobbit', author: 'Tolkien', pages: '500'}];
+let myLibrary = [];
 
 
 function Book(title, author, pages) {
@@ -15,6 +15,17 @@ function addBookToLibrary(title, author, pages) {
   myLibrary.push(new Book(title, author, pages))
 }
 
+function deleteTable(bookArray) {
+  console.log(bookArray)
+  for (let i = 1; i < bookArray.length + 1; i++) {
+    let table = document.getElementById("bookTable");
+    let row = table.deleteRow(i);
+    console.log(i)
+   
+    }
+}
+
+
 function displayBooks(bookArray) {
   for (let i = 0; i < bookArray.length; i++) {
   let table = document.getElementById("bookTable");
@@ -29,10 +40,10 @@ function displayBooks(bookArray) {
   }
 }
 
-
+/*
 addBookToLibrary('book3' , 'Tolkien', '50')
 
-displayBooks(myLibrary)
+displayBooks(myLibrary)*/
 
 
 
@@ -45,6 +56,10 @@ document.querySelector('form').addEventListener('submit', (e) => {
   let authorForm = data.author
   let pagesForm = data.pages
   let titleForm = data.title
+  
+  if (myLibrary.length > 0)
+{ deleteTable(myLibrary)
+}
   addBookToLibrary(titleForm, authorForm, pagesForm)
   displayBooks(myLibrary)
 });
