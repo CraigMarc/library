@@ -61,6 +61,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 }
   addBookToLibrary(titleForm, authorForm, pagesForm)
   displayBooks(myLibrary)
+  document.getElementById("form").reset();
 });
 
 
