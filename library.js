@@ -25,13 +25,13 @@ function displayBooks(bookArray) {
   cell1.textContent = bookArray[i].title;
   cell2.textContent = bookArray[i].author;
   cell3.textContent = bookArray[i].pages;
- console.log(bookArray[0].title)
+ 
   }
 }
 
 
-addBookToLibrary('book3' , 'Tolkien', '500')
-console.log(myLibrary[0].author)
+addBookToLibrary('book3' , 'Tolkien', '50')
+
 displayBooks(myLibrary)
 
 

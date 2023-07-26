@@ -20,5 +20,34 @@
           <td>This is also a data cell!</td>
         </tr>
       </table>
+      <form action="https://httpbin.org/post" method="post">
+        <fieldset>
+        <div class="input">
+        <label for="title">Title</label>
+        <input name="title" type="text" id="title" required>
+        </div>
+        <div class="input">
+        <label for="author">Author</label>
+        <input name="author" type="text" id="author" required>
+        </div>
+      
+        <div class="input">
+        <label for="pages">Pages</label>
+        <input name="pages" type="text" id="pages" required>
+        </div>
+        <div class="input">
+          <label for="read">Read</label>
+          <input name="read" type="checkbox" id="read" required>
+          </div>
+        
+        </fieldset>
+    
+        
+        <div class="submit">
+        <button type="submit">Add Book</button>
+        
+        </div>
+       </form>
+
 </body>
 </html>
