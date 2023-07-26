@@ -61,7 +61,7 @@ number.forEach((button) => {
   button.addEventListener('click', () => {
     let value = button.value
 
-console.log(value)
+    deleteBook(value)
 
     
 
@@ -72,12 +72,22 @@ console.log(value)
 }
 
 
+/*delete book*/
 
-/*
-addBookToLibrary('book3' , 'Tolkien', '50')
+function deleteBook(value) {
+myLibrary.splice(value, 1)
+deleteTable2(myLibrary)
+displayBooks(myLibrary)
+}
 
-displayBooks(myLibrary)*/
+function deleteTable2(bookArray) {
+  console.log(bookArray)
+  for (let i = 1; i < bookArray.length + 2; i++) {
+    document.getElementById("bookTable").deleteRow(1);
 
+
+  }
+}
 
 
 
