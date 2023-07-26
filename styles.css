@@ -5,3 +5,7 @@ table, td, th {
   th {
     width: 100px
   }
+
+  #deleteButton {
+    color: red;
+  }
