@@ -58,11 +58,11 @@ const number = document.querySelectorAll('#deleteButton');
 
 number.forEach((button) => {
 
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
     let value = button.value
 
     deleteBook(value)
-
+    e.stopImmediatePropagation();
     
 
   })
@@ -124,5 +124,3 @@ document.querySelector('form').addEventListener('submit', (e) => {
 const theHobbit = new Book('The Hobbit' , 'Tolkien', '500')
 console.log(theHobbit)
 console.log(theHobbit.info())*/
-
-
