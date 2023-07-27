@@ -1,5 +1,21 @@
 let myLibrary = [];
 
+/*hide menu*/
+
+const form = document.getElementById('form');
+form.style.display = 'none';
+
+/*form button listner*/
+
+const btn = document.getElementById('showMenu');
+
+btn.addEventListener('click', () => {
+  form.style.display = 'block';
+  btn.style.display = 'none';
+})
+
+
+/*object constructor*/
 
 function Book(title, author, pages, read) {
 
@@ -153,8 +169,8 @@ document.querySelector('form').addEventListener('submit', (e) => {
   addBookToLibrary(titleForm, authorForm, pagesForm, readForm)
   displayBooks(myLibrary)
   document.getElementById("form").reset();
-
-
+  form.style.display = 'none';
+  btn.style.display = 'block';
 
 });
 
