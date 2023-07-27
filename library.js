@@ -82,8 +82,8 @@ function displayBooks(bookArray) {
 
       button.addEventListener('click', (e) => {
         let value = button.value
-        console.log(value)
-        
+        readBook(value)
+
         e.stopImmediatePropagation();
 
 
@@ -96,16 +96,31 @@ function displayBooks(bookArray) {
   }
 }
 
+/*read book*/
+function readBook(value) {
 
+  if (myLibrary[value].read == 'No') {
+    myLibrary[value].read = 'Yes'
+  }
+
+  else {
+    myLibrary[value].read = 'No'
+  }
+
+  deleteTable(myLibrary)
+  displayBooks(myLibrary)
+
+
+}
 /*delete book*/
 
 
 
 function deleteBook(value) {
 
-  
+
   myLibrary.splice(value, 1)
-  
+
 
   deleteTable2(myLibrary)
   displayBooks(myLibrary)
