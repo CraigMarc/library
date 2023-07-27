@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
+  font-family: 'Roboto', sans-serif;
   width: 100%;
 }
 
-table, td, th {
+td, th {
     border: 1px solid black;
   }
 
@@ -12,6 +15,7 @@ table, td, th {
 
   #deleteButton {
     color: red;
+    
   }
 
   #bookTable {
@@ -27,5 +31,21 @@ table, td, th {
       position: fixed;
       bottom: 20px;
       right: 20px;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    #form {
+      width: 60%;
+      margin:auto;
+      padding-top: 100px;
+    }
+
+    #cell5 {
+      border: none;
+    }
+
+    #cell6 {
+      border: none;
     }
   

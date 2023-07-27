@@ -51,7 +51,9 @@ function displayBooks(bookArray) {
     let cell3 = row.insertCell(2);
     let cell4 = row.insertCell(3);
     let cell5 = row.insertCell(4);
+    cell5.setAttribute('id', 'cell5');
     let cell6 = row.insertCell(5);
+    cell6.setAttribute('id', 'cell6');
 
     cell1.textContent = bookArray[i].title;
     cell2.textContent = bookArray[i].author;
@@ -176,7 +178,3 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
 
 
-/*
-const theHobbit = new Book('The Hobbit' , 'Tolkien', '500')
-console.log(theHobbit)
-console.log(theHobbit.info())*/
