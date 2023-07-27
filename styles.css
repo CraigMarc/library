@@ -36,9 +36,10 @@ td, th {
     }
 
     #form {
-      width: 60%;
+      width: 50%;
       margin:auto;
       padding-top: 100px;
+      
     }
 
     #cell5 {
@@ -49,3 +50,23 @@ td, th {
       border: none;
     }
   
+    .input {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      text-align: right;
+      width: 300px
+    }
+
+    .submit {
+      text-align: right;
+      
+    }
+
+    .submit > button {
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    input {
+      border-radius: 5px;
+    }
