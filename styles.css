@@ -3,10 +3,12 @@
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
+  background-color: #e9ebf0;
 }
 
 td, th {
-    border: 1px solid black;
+  border: 1px solid rgb(136, 127, 127);
+    background-color: white;
   }
 
   th {
@@ -15,7 +17,18 @@ td, th {
 
   #deleteButton {
     color: red;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     
+  }
+
+  #readButton {
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   #bookTable {
@@ -33,6 +46,7 @@ td, th {
       right: 20px;
       padding: 5px;
       border-radius: 10px;
+      background-color: white;
     }
 
     #form {
@@ -44,10 +58,12 @@ td, th {
 
     #cell5 {
       border: none;
+      background-color: #e9ebf0;
     }
 
     #cell6 {
       border: none;
+      background-color: #e9ebf0;
     }
   
     .input {
@@ -65,6 +81,7 @@ td, th {
     .submit > button {
       border-radius: 10px;
       padding: 5px;
+      background-color: white;
     }
 
     input {
@@ -73,4 +90,6 @@ td, th {
 
     fieldset {
       border: none;
+      
+      
     }
