@@ -1,3 +1,7 @@
+body {
+  width: 100%;
+}
+
 table, td, th {
     border: 1px solid black;
   }
@@ -9,3 +13,19 @@ table, td, th {
   #deleteButton {
     color: red;
   }
+
+  #bookTable {
+    margin: auto;
+    
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #showMenu {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  
