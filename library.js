@@ -17,7 +17,7 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 function deleteTable(bookArray) {
- 
+
   for (let i = 1; i < bookArray.length + 1; i++) {
     document.getElementById("bookTable").deleteRow(1);
 
@@ -41,7 +41,7 @@ function displayBooks(bookArray) {
     cell2.textContent = bookArray[i].author;
     cell3.textContent = bookArray[i].pages;
     cell4.textContent = bookArray[i].read;
-    
+
     let readButton = document.createElement('button');
     readButton.setAttribute('type', 'button');
     readButton.setAttribute('id', 'readButton');
@@ -49,7 +49,7 @@ function displayBooks(bookArray) {
     readButton.textContent = 'Read'
     cell5.appendChild(readButton);
 
-    
+
 
     let deleteButton = document.createElement('button');
     deleteButton.setAttribute('type', 'button');
@@ -58,21 +58,40 @@ function displayBooks(bookArray) {
     deleteButton.textContent = 'Delete'
     cell6.appendChild(deleteButton);
 
-  /*button event listener*/
+    /*delete button event listener*/
 
-const number = document.querySelectorAll('#deleteButton');
+    const number = document.querySelectorAll('#deleteButton');
 
-number.forEach((button) => {
+    number.forEach((button) => {
 
-  button.addEventListener('click', (e) => {
-    let value = button.value
+      button.addEventListener('click', (e) => {
+        let value = button.value
 
-    deleteBook(value)
-    e.stopImmediatePropagation();
-    
+        deleteBook(value)
+        e.stopImmediatePropagation();
 
-  })
-})
+
+      })
+    })
+
+    /* read button event listner*/
+
+    const read = document.querySelectorAll('#readButton');
+
+    read.forEach((button) => {
+
+      button.addEventListener('click', (e) => {
+        let value = button.value
+        console.log(value)
+        
+        e.stopImmediatePropagation();
+
+
+      })
+    })
+
+
+
 
   }
 }
@@ -84,16 +103,16 @@ number.forEach((button) => {
 
 function deleteBook(value) {
 
-  console.log(value)
+  
   myLibrary.splice(value, 1)
-   console.log(myLibrary)
- 
-deleteTable2(myLibrary)
-displayBooks(myLibrary)
+  
+
+  deleteTable2(myLibrary)
+  displayBooks(myLibrary)
 }
 
 function deleteTable2(bookArray) {
-  
+
   for (let i = 1; i < bookArray.length + 2; i++) {
     document.getElementById("bookTable").deleteRow(1);
 
@@ -120,7 +139,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
   displayBooks(myLibrary)
   document.getElementById("form").reset();
 
-  
+
 
 });
 
