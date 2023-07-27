@@ -35,22 +35,28 @@ function displayBooks(bookArray) {
     let cell3 = row.insertCell(2);
     let cell4 = row.insertCell(3);
     let cell5 = row.insertCell(4);
+    let cell6 = row.insertCell(5);
 
     cell1.textContent = bookArray[i].title;
     cell2.textContent = bookArray[i].author;
     cell3.textContent = bookArray[i].pages;
     cell4.textContent = bookArray[i].read;
-    let tBox = document.createElement('input');
-    tBox.setAttribute('type', 'checkbox');
-    tBox.setAttribute('value', 'i');
-    cell4.appendChild(tBox);
+    
+    let readButton = document.createElement('button');
+    readButton.setAttribute('type', 'button');
+    readButton.setAttribute('id', 'readButton');
+    readButton.setAttribute('value', i);
+    readButton.textContent = 'Read'
+    cell5.appendChild(readButton);
+
+    
 
     let deleteButton = document.createElement('button');
     deleteButton.setAttribute('type', 'button');
     deleteButton.setAttribute('id', 'deleteButton');
     deleteButton.setAttribute('value', i);
     deleteButton.textContent = 'Delete'
-    cell5.appendChild(deleteButton);
+    cell6.appendChild(deleteButton);
 
   /*button event listener*/
 
