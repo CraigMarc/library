@@ -54,7 +54,7 @@ td, th {
       padding-bottom: 10px;
       padding-top: 10px;
       text-align: right;
-      width: 300px
+      
     }
 
     .submit {
@@ -69,4 +69,8 @@ td, th {
 
     input {
       border-radius: 5px;
+    }
+
+    fieldset {
+      border: none;
     }
