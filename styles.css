@@ -6,90 +6,106 @@ body {
   background-color: #e9ebf0;
 }
 
-td, th {
+td,
+th {
   border: 1px solid rgb(136, 127, 127);
-    background-color: white;
-  }
+  background-color: white;
+}
 
-  th {
-    width: 100px
-  }
 
-  #deleteButton {
-    color: red;
-    background-color: white;
-    border-radius: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    
-  }
 
-  #readButton {
-    background-color: white;
-    border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.th3 {
+  width: 50px;
+}
 
-  #bookTable {
-    margin: auto;
-    
-  }
+.th4 {
+  width: 50px;
+}
 
-  h1 {
-    text-align: center;
-  }
+.th1 {
+  width: 200px;
+}
 
-  #showMenu {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 5px;
-      border-radius: 10px;
-      background-color: white;
-    }
+.th2 {
+  width: 100px;
+}
 
-    #form {
-      width: 50%;
-      margin:auto;
-      padding-top: 100px;
-      
-    }
+#deleteButton {
+  color: red;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 
-    #cell5 {
-      border: none;
-      background-color: #e9ebf0;
-    }
+}
 
-    #cell6 {
-      border: none;
-      background-color: #e9ebf0;
-    }
-  
-    .input {
-      padding-bottom: 10px;
-      padding-top: 10px;
-      text-align: right;
-      
-    }
+#readButton {
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-    .submit {
-      text-align: right;
-      
-    }
+#bookTable {
+  margin: auto;
 
-    .submit > button {
-      border-radius: 10px;
-      padding: 5px;
-      background-color: white;
-    }
+}
 
-    input {
-      border-radius: 5px;
-    }
+h1 {
+  text-align: center;
+}
 
-    fieldset {
-      border: none;
-      
-      
-    }
+#showMenu {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 5px 20px 5px 20px;
+  border-radius: 10px;
+  background-color: white;
+  font-weight: bold;
+}
+
+#form {
+  width: 50%;
+  margin: auto;
+  padding-top: 100px;
+
+}
+
+#cell5 {
+  border: none;
+  background-color: #e9ebf0;
+}
+
+#cell6 {
+  border: none;
+  background-color: #e9ebf0;
+}
+
+.input {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: right;
+
+}
+
+.submit {
+  text-align: right;
+
+}
+
+.submit>button {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+}
+
+input {
+  border-radius: 5px;
+}
+
+fieldset {
+  border: none;
+
+
+}
