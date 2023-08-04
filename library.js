@@ -32,6 +32,8 @@ function addBookToLibrary(title, author, pages, read) {
   myLibrary.push(new Book(title, author, pages, read))
 }
 
+console.log(myLibrary)
+
 function deleteTable(bookArray) {
 
   for (let i = 1; i < bookArray.length + 1; i++) {
