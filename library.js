@@ -16,7 +16,7 @@ btn.addEventListener('click', () => {
 
 
 /*object constructor*/
-
+/*
 function Book(title, author, pages, read) {
 
   this.title = title
@@ -30,7 +30,21 @@ function Book(title, author, pages, read) {
 
 function addBookToLibrary(title, author, pages, read) {
   myLibrary.push(new Book(title, author, pages, read))
+}/*
+
+
+/*using factory functions*/
+
+const Book = (title, author, pages, read) => {
+  
+  return { title, author, pages, read };
+};
+
+function addBookToLibrary(title, author, pages, read) {
+  myLibrary.push(Book(title, author, pages, read))
+
 }
+
 
 function deleteTable(bookArray) {
 
