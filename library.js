@@ -16,7 +16,7 @@ btn.addEventListener('click', () => {
 
 
 /*object constructor*/
-
+/*
 function Book(title, author, pages, read) {
 
   this.title = title
@@ -26,6 +26,19 @@ function Book(title, author, pages, read) {
   this.info = function () {
     return title + ' ' + author + ' ' + pages
   }
+}*/
+
+//class constructor
+
+class Book {
+
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+
 }
 
 function addBookToLibrary(title, author, pages, read) {
